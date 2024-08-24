@@ -1,0 +1,18 @@
+#Dice
+import random                              # importing the module random
+def Dice():
+    ans = 'y'
+    while ans == 'y':
+        x = random.randint(1,6)            # generates a random integer number between 1 to 6
+        print("The outcome value:", x)
+        ans = input("If you want to roll again press y:")       
+    print("END")
+#_main
+Dice()
+
+OUTPUT
+The outcome value: 2
+If you want to roll again press y:y
+The outcome value: 5
+If you want to roll again press y:n
+END

@@ -1,0 +1,66 @@
+#Prt details
+
+import pickle
+def create():
+    f = open("Result.txt" , "wb")
+    ans = 'y'
+    while ans == 'y':                                                      # As long as user wants
+        n = input("enter students name:")
+        r = int(input("enter students roll number:"))
+        m = int(input("Enter your marks:"))
+        l = [n,r,m]                                                         # A list containing data
+        pickle.dump(l,f)
+        ans = input("if want to conti press y/if not then n:")
+    f.close()
+
+def Search():
+    a = 0
+    f = open("Result.txt" ,"rb")
+    ro = int(input("Enter roll number to be searched:"))
+    try :
+          while True :
+             s = pickle.load(f)
+             if s[1] == ro:
+                   print("Name:" , s[0])
+                   print("Roll Number:" , s[1])
+                   print("Marks:" , s[2])
+                   a+=1
+    except EOFError:
+        if a == 0:
+            print("Data not found")
+        f.close()
+#_main_
+
+create()
+Search()
+
+#OUTPUT
+
+enter students name:Aryan
+enter students roll number:1
+Enter your marks:10
+if want to conti press y/if not then n:y
+enter students name:Anandu
+enter students roll number:2
+Enter your marks:45
+if want to conti press y/if not then n:y
+enter students name:Harsh
+enter students roll number:3
+Enter your marks:56
+if want to conti press y/if not then n:y
+enter students name:Navam
+enter students roll number:4
+Enter your marks:58
+if want to conti press y/if not then n:y
+enter students name:Ritanshu
+enter students roll number:5
+Enter your marks:78
+if want to conti press y/if not then n:y
+enter students name:Ronit
+enter students roll number:6
+Enter your marks:05
+if want to conti press y/if not then n:n
+Enter roll number to be searched:5
+Name: Ritanshu
+Roll Number: 5
+Marks: 78

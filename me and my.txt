@@ -1,0 +1,26 @@
+#me and my
+
+def CountMe_My():
+    count_m = count_M = 0
+    f = open("Poem.txt" , "r")
+    l = f.readlines()
+    for i in l:
+        x = i.split()
+        for a in x:
+            if a == 'me':
+                count_m+=1
+            elif a == 'my':
+                count_M+=1
+                
+    return(count_m , count_M)
+    f.close()
+
+#_main_
+
+c , z = CountMe_My()
+print("The number of 'me' words are:" , c)
+print("The number of 'my' words are:" , z)
+
+Output
+The number of 'me' words are: 3
+The number of 'my' words are: 4

@@ -1,0 +1,22 @@
+#count t
+
+def Count_T():
+    count = 0
+    f = open("Data.txt" , "r")
+    s = f.readline()
+    while s:
+        if s[0] == 'T':
+            count+=1
+        s = f.readline() 
+    f.close()
+    return(count)
+
+
+#_main_
+
+c = Count_T()
+print("The number of lines starting with 'T' are:" , c)
+
+#Output
+
+The number of lines starting with 'T' are: 4

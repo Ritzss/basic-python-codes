@@ -1,0 +1,30 @@
+#No. of consonant and vowels
+
+def Vowels():
+    count_V = count_C = 0
+    f = open("Story.txt" , "r")
+    s = f.readline()
+    while s:
+        l = s.split()
+        for i in l :
+            for y in range (len(i)):
+                if i[y] in ["a","e","i","o","u"]:
+                    count_V+=1
+                elif i[y] in ["A","E","I","O","U"]:
+                    count_V+=1
+                else :
+                    count_C+=1
+        s = f.readline()
+    return(count_V,count_C)
+
+
+#_main_
+
+a,b = Vowels()
+print("The number of vowels are :" , a)
+print("The number of consonants are :" , b)
+
+OUTPUT
+
+The number of vowels are : 28
+The number of consonants are : 53

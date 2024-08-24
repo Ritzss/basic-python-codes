@@ -1,0 +1,91 @@
+
+
+def Sum(l):
+    sum_e = sum_o = 0
+    for i in l:
+        if i %2 == 0:
+            sum_e+=i
+        else :
+            sum_o+=i
+    return(sum_e , sum_o)
+
+def Secondlargest(T):
+    max_T = max(T)
+    sec_max = 0
+    for i in T:
+        if i > sec_max and i < max_T:
+            sec_max = i
+    return(sec_max)
+
+def count_Words(s):
+    c_words = c_spaces = 0
+    for i in range (len(s)):
+        if s[i].isalpha():
+            c_words+=1
+        elif s[i] == " " :
+            c_spaces+=1
+    return(c_words , c_spaces)
+
+def Average(T):
+    C = 0
+    for i in T:
+        C+=i
+    avg = C/(len(T))
+    return(avg)
+#_main_
+
+print("1. to find the sum of even and odd elements of list")
+print("2. to find the average of the elements of a tuple")
+print("3. to find the second largest element of the tuple")
+print("4. to count the number of spaces and words in a string")
+ans = 'y'
+while ans == 'y':
+    choice = int(input("Enter your choice:"))
+    if choice == 1:
+        lst = eval(input("Enter the list:"))
+        LE , LO = Sum(lst)
+        print("The sum of even elements is:" , LE)
+        print("The sum of odd elements is:" , LO)
+    elif choice == 2:
+        Tup = eval(input("Enter the tuple:"))
+        A = Average(Tup)
+        print("The average of the elements of tuple is:" , A)
+    elif choice == 3:
+        Tup = eval(input("Enter the tuple:"))
+        S = Secondlargest(Tup)
+        print("The second largest element of tuple is:" , S)
+    elif choice == 4:
+        st = input("Enter the string:")
+        CW , CS = count_Words(st)
+        print("The number of spaces are :" , CS)
+        print("The number of words are :" , CW)
+    else:
+        print("Wrong choice:")
+    ans = input("If you want to continue press y:")
+print("END")
+
+Output
+
+1. to find the sum of even and odd elements of list
+2. to find the average of the elements of a tuple
+3. to find the second largest element of the tuple
+4. to count the number of spaces and words in a string
+Enter your choice:3
+Enter the tuple:(1,3,7,6,5,8,9,10,99)
+The second largest element of tuple is: 10
+If you want to continue press y:y
+Enter your choice:1
+Enter the list:2,3,4,5,6,7,9,8
+The sum of even elements is: 20
+The sum of odd elements is: 24
+If you want to continue press y:y
+Enter your choice:4
+Enter the string:r i t a n s h u i s u s i n g p y t h o n
+The number of spaces are : 20
+The number of words are : 21
+If you want to continue press y:y
+Enter your choice:2
+Enter the tuple:(1,21,23,44,55,65,67,65,60)
+The average of the elements of tuple is: 44.55555555555556
+If you want to continue press y:n
+END

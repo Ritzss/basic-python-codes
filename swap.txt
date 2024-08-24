@@ -1,0 +1,27 @@
+#swap
+def Swap(l):
+    mid = (len(l)//2)+2
+    a = 0
+    while a<= mid :
+        if a %2 == 0:
+            l[a] , l[a+1] = l[a+1] , l[a]
+            a+=1
+        else:
+            a+=1
+    return(l)
+
+# _main_
+
+lst = eval(input("Enter the list of even no of elements:"))
+print("The original list is:" , lst)
+if len(lst) == 1:
+    print("Swaping not possible")
+else:
+    N = Swap(lst)
+print("New list is:" , N)
+
+OUTPUT
+
+Enter the list of even no of elements:[1,2,3,4,5,6,7,8]
+The original list is: [1, 2, 3, 4, 5, 6, 7, 8]
+New list is: [2, 1, 4, 3, 6, 5, 8, 7]

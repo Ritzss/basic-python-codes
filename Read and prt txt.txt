@@ -1,0 +1,16 @@
+#Read and prt txt
+ 
+myfile=open("poem.txt","r")
+str=myfile.readline()
+print(str,end=' ')
+str=myfile.readline()
+print(str,end='')
+str=myfile.readline()
+print(str,end=' ')
+myfile.close()
+  
+#OUTPUT
+
+why?
+ we work,we try to be better
+we work with full zest

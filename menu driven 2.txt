@@ -1,0 +1,29 @@
+#menu driven-2
+def stat(line):
+    lowercount=uppercount=0
+    digitcount=alphacount=0
+    for a in line:
+        if a.islower():
+            lowercount+=1
+        elif a.isupper():
+            uppercount+=1
+        elif a.isdigit():
+            digitcount+=1
+        elif a.isalpha():
+            alphacount+=1
+    lst=[lowercount,uppercount,digitcount,alphacount]
+    return lst
+line=input("Enter the line:")
+lst1=stat(line)
+print("Number of lowercase:",lst1[0])
+print("Number of uppercase:",lst1[1])
+print("Number of digit:",lst1[2])
+print("Number of alphabets:",lst1[3])
+
+Output
+
+Enter the line:ThE PrIsOnEr 123 Is SuBjEcTeD To DiE
+Number of lowercase: 12
+Number of uppercase: 15
+Number of digit: 3
+Number of alphabets:27

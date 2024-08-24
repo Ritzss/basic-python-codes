@@ -1,0 +1,25 @@
+#Odd and Even
+
+def Odd_Even(T):
+    Tup_even = Tup_odd = ( )
+    for i in T:
+        if i% 2 == 0:
+            Tup_even = Tup_even + (i,)
+        else :
+            Tup_odd = Tup_odd + (i,)
+    return(Tup_even , Tup_odd)
+
+#_main_
+
+t = eval(input("enter the tuple:"))
+print("original tuple is:" , t)
+E , O = Odd_Even(t)
+print("The tuple of even elements is:" , E)
+print("The tuple of odd elements is:" , O)
+
+Output 
+
+enter the tuple:(1,5,9,3,11,22,44,66,88,68,24)
+original tuple is: (1, 5, 9, 3, 11, 22, 44, 66, 88, 68, 24)
+The tuple of even elements is: (22, 44, 66, 88, 68, 24)
+The tuple of odd elements is: (1, 5, 9, 3, 11)

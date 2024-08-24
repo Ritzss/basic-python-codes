@@ -1,0 +1,15 @@
+#/ in bw words
+myfile=open("Answer.txt","r")
+line=" "               #initial stored a place(a non-none)
+while line:
+    line=myfile.readline()    #one line read from file
+    #printing the line word by word using split()
+    for word in line.split():
+        print(word,end='/')
+    print()
+    #close the file
+    myfile.close()
+
+#Output
+
+mayday/mayday/the/ship/is/slowly/sinking/they/thick/i/am/crazy/but/they/dont/know/the/feeling/they/all/around/me/circling/like/vultures/they/wanna/break/me/and/wash/away/my/colour/wash/away/my/colours/so/take/me/high/and/i/sing/o/you/make/everything/okay/okay/okay/okay/we/are/one/and/the/same/take/all/of/the/pain/away/away/away/away/save/me/if/i/become/my/demon/

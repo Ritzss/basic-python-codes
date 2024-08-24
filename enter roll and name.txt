@@ -1,0 +1,54 @@
+#enter roll and name
+
+import pickle
+def create():
+    f = open("Class.txt" , "wb")
+    ans = 'Y'
+    while ans == 'Y':
+        n = input("enter students name:")
+        r = int(input("enter students roll number:"))
+        l = [n,r]
+        pickle.dump(l,f)
+        ans = input("if want to conti press Y/if not then N:")
+    f.close()
+
+def Search():
+    z = 0
+    f = open("Class.txt" , "rb")
+    ro = int(input("enter roll number to be searched:"))
+    try :
+        while True:
+            a = pickle.load(f)
+            if a[1] == ro:
+                print("Name" , a[0])
+                print("Roll number" , a[1])
+                z+=1
+    except EOFError:
+        if z == 0:
+            print("Data not found ")
+        f.close()
+#_main_
+
+create()
+Search()
+
+#OUTPUT
+
+enter students name:RITANSHU
+enter students roll number:1 
+if want to conti press Y/if not then N:Y
+enter students name:ANANDU
+enter students roll number:2
+if want to conti press Y/if not then N:Y
+enter students name:HARSH
+enter students roll number:3
+if want to conti press Y/if not then N:Y
+enter students name:ARYAN
+enter students roll number:4
+if want to conti press Y/if not then N:Y
+enter students name:NAVAM
+enter students roll number:5
+if want to conti press Y/if not then N:N
+enter roll number to be searched:5
+Name NAVAM
+Roll number 5

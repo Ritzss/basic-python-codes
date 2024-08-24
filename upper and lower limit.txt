@@ -1,0 +1,20 @@
+#upper and lower limit
+
+lower=int(input("Enter the lower limit for the range:"))
+upper=int(input("Enter the upper limit for the range:"))
+for i in range(lower,upper+1):
+    if(i%2!=0):
+        print(i)
+
+OUTPUT
+Enter the lower limit for the range:5
+Enter the upper limit for the range:22
+5
+7
+9
+11
+13
+15
+17
+19
+21

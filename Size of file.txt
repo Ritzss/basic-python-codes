@@ -1,0 +1,20 @@
+#Size of file
+
+myfile=open('poem.txt',"r")
+Str1=0              #initially storing a space(any nOn-none value)
+size=0
+tsize=0
+k=myfile.readlines()
+u=open('poem.txt',"r")
+for Str1 in range(len(k)):
+    Str1=u.readline()
+    tsize+=len(Str1)
+    size+=len(Str1.strip())
+print("size of file after removing all EOL character & blank lines:",size)
+print("the total size of the file:",tsize)
+myfile.close()
+
+#Output
+
+size of file after removing all EOL character & blank lines: 349
+the total size of the file: 407

@@ -1,0 +1,21 @@
+#mean of list
+#To ncalculate the mean of the given list.
+def mean_list(l):
+    length=len(l)
+    mean=0
+    sumlist=0
+    for i in range (0,length):
+        sumlist+=l[i]
+        mean=sumlist/length
+    print("Given list:",l)
+    print("Mean of the listis:",mean)
+#main program
+l=eval(input("Enter list:"))
+n=mean_list(l)
+
+
+OUTPUT:-
+
+Enter list:[1,2,3,4,5,6]
+Given list: [1, 2, 3, 4, 5, 6]
+Mean of the listis: 3.5
